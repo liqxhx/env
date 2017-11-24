@@ -1,5 +1,5 @@
 效果
-![](https://wangwang4git.github.io/images/mac_iterm2/iterm2_effect.jpeg)
+![](images/item2.gif)
 
 ## 参考
 [iTerm2 Oh-my-zsh配置与agnoster主题配置](https://wangwang4git.github.io/blog/2017/04/22/iterm2-oh-my-zsh-config-and-agnoster-theme-config/)
