@@ -2,7 +2,8 @@
 ![](images/item2.gif)
 
 ## 参考
-[iTerm2 Oh-my-zsh配置与agnoster主题配置](https://wangwang4git.github.io/blog/2017/04/22/iterm2-oh-my-zsh-config-and-agnoster-theme-config/)
+[iTerm2 Oh-my-zsh配置与agnoster主题配置](https://wangwang4git.github.io/blog/2017/04/22/iterm2-oh-my-zsh-config-and-agnoster-theme-config/)  <br />
+[程序员内功系列--iTerm与Zsh篇](https://xiaozhou.net/learn-the-command-line-iterm-and-zsh-2017-06-23.html)
 ## zsh与bash相互切换
  ```
  echo $SHELL       #显示当前shell
@@ -67,6 +68,15 @@ ZSH_THEME="agnoster"
 
 source ~/.zshrc
 ```
+
+## 插件
+[zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)<br />
+[zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)<br />
+[]()<br />
+
+## lambda-mod主题
+![](https://xiaozhou.net/pics/iterm/4.png)<br />
+[lambda-mod.zsh-theme](https://github.com/TimothyYe/mydotfiles/blob/master/lambda-mod.zsh-theme)
 
 
 
