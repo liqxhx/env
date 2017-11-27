@@ -47,6 +47,9 @@ python setup.py install --prefix=~/shadowsocks
 如果失败，根据提示相应处理。成功后
 cd ~/shadowsocks/bin
 ./sslocal -s serverIp -p serverPort -k "password" -l localPort -t timeOut -m cypherMethod
+
+google-chrome --proxy-server=socks5://127.0.0.1:1080
+
 ./sslocal --help 
 usage: sslocal [OPTION]...
 A fast tunnel proxy that helps you bypass firewalls.
