@@ -16,10 +16,22 @@ mkdir -p my-vagrant-project/ubuntu14.04
 cd my-vagrant-project/ubuntu14.04
 
 vagrant init bento/ubuntu-14.04 --box-version 201708.22.0
-#下载等待
+
 vagrant up
+#下载等待
 #vagrant up --provider hyperv
 vagrant ssh
+
+
 ```
+常用命令
+vagrant package --output ubuntu1404.box
+vagrant suspend 挂起
+vagrant reload
+
+vagrant box list
+vagrant box add name url
+vagrant init name
+
 ## 在虚拟机中安装docker
 [docker](https://www.docker.com/)
