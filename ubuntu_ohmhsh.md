@@ -10,7 +10,7 @@ echo /etc/shells
 ## 安装oh my zsh
 [官网](http://ohmyz.sh/)  
 
-安装命令："$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
+安装命令：`sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
 
 ## 插件
 [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)<br />
