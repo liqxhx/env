@@ -33,5 +33,8 @@ vagrant box list
 vagrant box add name url
 vagrant init name
 
+## 配置vagrant
+sudo useradd -d /home/liqh -m -s /bin/zsh
+
 ## 在虚拟机中安装docker
 [docker](https://www.docker.com/)
