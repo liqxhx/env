@@ -37,4 +37,9 @@ vagrant init name
 sudo useradd -d /home/liqh -m -s /bin/zsh
 
 ## 在虚拟机中安装docker
-[docker](https://www.docker.com/)
+[docker](https://www.docker.com/)  
+linux中可以用下面方式安装
+```
+sudo wget -qO- https://get.docker.com/ | sh #要fq
+sudo usermod -aG docker liqh #加入docker用户组
+```
