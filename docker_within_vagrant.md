@@ -24,22 +24,25 @@ vagrant ssh
 
 
 ```
-常用命令
-vagrant package --output ubuntu1404.box
-vagrant suspend 挂起
-vagrant reload
+常用命令<br />
+vagrant package --output ubuntu1404.box<br />
+vagrant suspend 挂起<br />
+vagrant reload 重启<br />
 
-vagrant box list
-vagrant box add name url
-vagrant init name
+vagrant box list <br />
+vagrant box add name url<br />
+vagrant init name<br />
 
 ## 配置vagrant
 sudo useradd -d /home/liqh -m -s /bin/zsh
 
 ## 在虚拟机中安装docker
-[docker](https://www.docker.com/)  
+[docker](https://www.docker.com/)  <br />
 linux中可以用下面方式安装
 ```
+uname -r #检察内核版本 > 3.
 sudo wget -qO- https://get.docker.com/ | sh #要fq
+# sudo curl -s https://get.docker.com | sh
 sudo usermod -aG docker liqh #加入docker用户组
+docker pull hub.c.163.com/library/nginx:latest
 ```
