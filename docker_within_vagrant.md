@@ -35,6 +35,12 @@ vagrant init name<br />
 
 ## 配置vagrant
 sudo useradd -d /home/liqh -m -s /bin/zsh
+```
+vi Vagrantfile
+config.vm.box_check_update = false
+config.vm.network "public_network", use_dhcp_assigned_default_route: true
+```
+
 
 ## 在虚拟机中安装docker
 [docker](https://www.docker.com/)  <br />
