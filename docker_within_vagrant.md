@@ -79,4 +79,56 @@ docker build . -t jpress:latest # 构建镜像
 docker images
 dcoker run -d -p 8800:8080 jpress # 运行自己的容器
 
+# 自制镜像
+docker run -p 8880:80 -d hub.c.163.com/library/nginx # 
+docker cp index.html ab5f://usr/share/nginx/html # 添加内容
+docker commit -m"add my index.html" ab5 nginx-fun  # 提交 保存 nginx-fun为新images的名字
+docker rmi image_id # 根据imageId删除image
+docker ps -a # 显示所有已运行的容器历史
+docker rm container_id1 container_id2 # 删除容器
 ```
+
+## Dockerfile
+FROM base image
+RUN 在容器内执行命令
+ADD 往容器内添加文件，比COPY强大点，可以添加文件、目录、远程文件
+COPY 往容器内拷贝文件或目录
+CMD 指定容器执行程序入口
+ENTRYPOINT 与CMD一样，只是格式不一样，如果没有指定ENTRYPOINT则用CMD来启动，指定了ENTRYPOINT则用entrypoint，CMD所指示的内容将会作为entrypoint的参数
+WORKDIR 指定程序运行的路径
+ENV 为容器里设定环境变量
+MAINTAINER 指定容器作者、邮箱
+USER 指定执行命令的用户，一般不会在容器中用root来执行命令
+VOLUME mount point
+EXPOSE 暴露端口
+
+```
+echo "hello" > index.html
+
+docker pull ubuntu
+docker pull alpine  #alpine：是针对docker制作的一个极小linux环境
+
+vi Dockerfile
+FROM alpine:latest
+MAINTAINER liqh
+CMD echo 'hello docker'
+
+docker build -t alpine-hello-docker .
+docker images
+docker ps
+docker run alpine-hello-docker:latest 
+
+vi Dockerfile
+FROM ubuntu
+MAINTAINER liqh
+RUN sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
+RUN apt-get update
+RUN apt-get install -y nginx
+COPY index.html /var/www/html
+ENTRYPOINT ["/usr/sbin/nginx","-g","daemon off;"]
+EXPOSE 80
+
+docker build -t nginx_in_ubuntu .
+
+```
+
