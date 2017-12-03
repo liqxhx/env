@@ -97,6 +97,9 @@ Online help: <https://github.com/shadowsocks/shadowsocks>
 ## oracle instantclient
 
 ## mycli
+wget https://bootstrap.pypa.io/get-pip.py  --no-check-certificate <br />
+sudo python get-pip.py <br />
+sudo pip install mycli <br />
 
 ## 其它
 [Ubuntu在标题栏显示CPU、内存、网速和温度](http://blog.csdn.net/u013541140/article/details/50629825)
