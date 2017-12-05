@@ -138,4 +138,6 @@ EXPOSE 80
 docker build -t nginx_in_ubuntu .
 
 ```
-
+## FAQ
+1 在MacOS下，Docker　images保存在哪个路径下 [ref](http://blog.csdn.net/tony1130/article/details/53181071)
+/Users/{YourUserName}/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/Docker.qcow2
