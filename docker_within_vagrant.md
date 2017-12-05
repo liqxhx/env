@@ -92,21 +92,22 @@ docker commit -m"add my index.html" ab5 nginx-fun  # 提交 保存 nginx-fun为�
 docker rmi image_id # 根据imageId删除image
 docker ps -a # 显示所有已运行的容器历史
 docker rm container_id1 container_id2 # 删除容器
+docker stop 7c && docker rm -v 7c
 ```
 
 ## Dockerfile
-FROM base image
-RUN 在容器内执行命令
-ADD 往容器内添加文件，比COPY强大点，可以添加文件、目录、远程文件
-COPY 往容器内拷贝文件或目录
-CMD 指定容器执行程序入口
-ENTRYPOINT 与CMD一样，只是格式不一样，如果没有指定ENTRYPOINT则用CMD来启动，指定了ENTRYPOINT则用entrypoint，CMD所指示的内容将会作为entrypoint的参数
-WORKDIR 指定程序运行的路径
-ENV 为容器里设定环境变量
-MAINTAINER 指定容器作者、邮箱
-USER 指定执行命令的用户，一般不会在容器中用root来执行命令
-VOLUME mount point
-EXPOSE 暴露端口
+FROM base image<br />
+RUN 在容器内执行命令<br />
+ADD 往容器内添加文件，比COPY强大点，可以添加文件、目录、远程文件<br />
+COPY 往容器内拷贝文件或目录<br />
+CMD 指定容器执行程序入口<br />
+ENTRYPOINT 与CMD一样，只是格式不一样，如果没有指定ENTRYPOINT则用CMD来启动，指定了ENTRYPOINT则用entrypoint，CMD所指示的内容将会作为entrypoint的参数<br />
+WORKDIR 指定程序运行的路径<br />
+ENV 为容器里设定环境变量<br />
+MAINTAINER 指定容器作者、邮箱<br />
+USER 指定执行命令的用户，一般不会在容器中用root来执行命令<br />
+VOLUME mount point<br />
+EXPOSE 暴露端口<br />
 
 ```
 echo "hello" > index.html
