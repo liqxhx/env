@@ -64,6 +64,8 @@ docker ps
 docker exec -it a047 bash # 进入容器内部
 docker stop a047 # 停止指定容器
 docker ps
+docker ps -a
+docker stop a047 && docker rm -v a047
 -----------------------
 # 制作自己的镜像
 docker images
@@ -92,7 +94,7 @@ docker commit -m"add my index.html" ab5 nginx-fun  # 提交 保存 nginx-fun为�
 docker rmi image_id # 根据imageId删除image
 docker ps -a # 显示所有已运行的容器历史
 docker rm container_id1 container_id2 # 删除容器
-docker stop 7c && docker rm -v 7c
+
 ```
 
 ## Dockerfile
@@ -138,6 +140,48 @@ EXPOSE 80
 docker build -t nginx_in_ubuntu .
 
 ```
+## [volumes](https://docs.docker.com/engine/admin/volumes/volumes/)
+
+## registry
+1 
+```
+docker login
+
+#docker tag local-image:tag repo:tag
+#docker pull repo:tag
+
+
+```
+2 [私服](https://docs.docker.com/registry/)
+```
+docker pull registry:2
+docker images
+docker run -d -p 5000:5000 registry:2 
+#http://docker-on-mac:5000/v2/_catalog
+#curl http://docker-on-mac:5000/v2/_catalog
+#curl http://docker-on-mac:5000/v2/alp/tags/list
+docker tag alpine:3.7 docker-on-mac:5000/alpine:3.7
+docker push docker-on-mac:5000/alpine:3.7
+
+#repo
+#mac
+# 192.168.1.4 docker-on-mac
+#vi ~.docker/daemon.js
+{
+  "debug" : true,
+  "experimental" : true,
+ "insecure-registries":["docker-on-mac:5000"]
+}
+
+#client
+#ubuntu
+#192.168.1.5
+#su - root
+#vi /etc/docker/daemon.js
+#{"insecure-registries":["docker-on-mac:5000"]}
+#docker pull docker-on-mac:5000/alpine:3.7
+```
+
 ## FAQ
 1 在MacOS下，Docker　images保存在哪个路径下 [ref](http://blog.csdn.net/tony1130/article/details/53181071)
 /Users/{YourUserName}/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/Docker.qcow2
