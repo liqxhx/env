@@ -1,5 +1,10 @@
 ## 换源
 [ref](ubuntu_%E6%8D%A2%E6%BA%90.md)
+```
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup
+sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
+sudo apt-get update
+```
 ## 五笔
 ```
 sudo apt-get install fcitx-table-wbpy
