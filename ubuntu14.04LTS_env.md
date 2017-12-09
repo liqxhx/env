@@ -25,14 +25,14 @@ apt install git
 [ref](ubuntu_ohmhsh.md)
 
 ## sdkman
-[ref](http://sdkman.io/install.html)
+[ref](http://sdkman.io/install.html)<br />
 java<br />
 maven<br />
 gradle<br />
 scala<br />
 sbt<br />
 groovy<br />
-产
+
 ## intellij idea
 [IntelliJ IDEA](http://www.jetbrains.com/idea/)
 
@@ -111,9 +111,10 @@ sudo pip install mycli <br />
 * SET UP THE REPOSITORY<br />
 * INSTALL DOCKER CE<br />
 
-2 [Install it manually ](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#install-from-a-package) <br />
+2 [Install it manually](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#install-from-a-package) <br />
 
 3 [convenience scripts](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#upgrade-docker-ce-1) <br />
+[docker-install](https://github.com/docker/docker-install)
 
 
 ## 其它
