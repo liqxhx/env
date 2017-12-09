@@ -105,6 +105,16 @@ Online help: <https://github.com/shadowsocks/shadowsocks>
 wget https://bootstrap.pypa.io/get-pip.py  --no-check-certificate <br />
 sudo python get-pip.py <br />
 sudo pip install mycli <br />
+## docker
+[ref](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#install-docker-ce)<br />
+1 [set up Docker’s repositories](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#install-using-the-repository) <br />
+* SET UP THE REPOSITORY<br />
+* INSTALL DOCKER CE<br />
+
+2 [Install it manually ](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#install-from-a-package) <br />
+
+3 [convenience scripts](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#upgrade-docker-ce-1) <br />
+
 
 ## 其它
 [Ubuntu在标题栏显示CPU、内存、网速和温度](http://blog.csdn.net/u013541140/article/details/50629825)
