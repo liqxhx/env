@@ -85,11 +85,12 @@ bt //
 在程序崩溃时，一般会生成一个文件叫core文件。core文件记录的是程序崩溃时的内存映像，并加入调试信息。core文件生成的过程叫做core dump
 
 设置生成core文件
-ulimit -c  查看core-dump状态
-ulimit -c 数字 （如：ulimit -c 1024）
+ulimit -a 查看当前的各种用户进程限制
+ulimit -c  查看core-dump状态,0为关闭core文件生成
+ulimit -c 数字 （如：ulimit -c 1024设置core文件大小最大为1024）
 或ulimit -c unlimited 没有限制
 
-db利用core文件调试
+gdb利用core文件调试
 gdb 程序的文件名 core文件 // gdb bugging core.9351
 bt // 查看堆栈
 ```
