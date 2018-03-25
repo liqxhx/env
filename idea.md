@@ -94,3 +94,29 @@ relpace foreach
 字符串format或build
 实现接口，在接口上按alt+enter
 ```
+# quick javadoc
+显示javadoc
+
+# Annotate
+在代码所在行上右键单击，可以显示所在代码行相关的修改记录
+
+# 浏览代码中所有修改行
+previous change
+
+# 某个代码文件中部分撤销或全部撤销
+Revert
+```
+部分撤销在要撤销的地方执行
+全部撤销在任意空白的地方执行
+在右边档的文件夹上执行撤销可以将文件夹下的所有改动进行撤销
+```
+
+# local history
+记录了修改，相当一地个本地的版本工具
+```
+local history
+put label
+
+```
+
+
