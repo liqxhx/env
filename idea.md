@@ -118,5 +118,6 @@ local history
 put label
 
 ```
-
+# file structure
+类似eclipse的ctrl+o, 个人感觉很实用, 在find action中搜索keymaps，后设置
 
