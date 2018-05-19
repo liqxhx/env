@@ -1,8 +1,81 @@
+# BASE64
+# 消息摘要算法
+- MD(Message Digest) 
+
+算法|摘要长度|实现方
+-|-|-|
+MD2|128|JDK
+MD4|128|Bouncy Castle
+MD5|128|JDK
+
+- SHA(Secure Hash Algorithm) 安全的摘要算法  
+
+算法|摘要长度|实现方
+-|-|-|
+SHA-1|160|JDK
+SHA-224|224|Bouncy Castle
+SHA-256|256|JDK
+SHA-384|384|JDK
+SHA-512|512|JDK
+
+- MAC(Message Authentication Code) 消息认证码算法  
+HMAC(keyed-Hash Message Authentication Code)含有密钥的散列函数算法  
+整合MD、SHA  
+
+算法|摘要长度|实现方
+-|-|-|
+HmacMD2|128|Bouncy Castle
+HmacMD4|128|Bouncy Castle
+HmacMD5|128|JDK
+HmacSHA1|160|JDK
+HmacSHA224|224|Bouncy Castle
+HmacSHA256|256|JDK
+HmacSHA384|384|JDK
+HmacSHA512|512|JDK
+
+
+验证数据完整性
+
 # JAVA安全组成
-JCA(Java Cryptography Architecture)  
-JCE(Java Cryptography Extension)  
-JSSE(Java Secure Socket Extension)  
-JAAS
+JCA(Java Cryptography Architecture):提供基本的java安全的基本加密框架，如消息摘要、数字签名等
+JCE(Java Cryptography Extension):对JCA的扩展，提供了很多加密、消息摘要和密钥管理等功能，DES、AES、RSA  
+JSSE(Java Secure Socket Extension):提供基于SSL的加密功能，主要用于网络传输
+JAAS(Java Authentication and Authentication Service):  
+
+使用第三方加解密提供者  
+jdk中路径：$JAVA_HOME/jre/lib/security/java.security
+```
+# Note: Providers can be dynamically registered instead by calls to
+# either the addProvider or insertProviderAt method in the Security
+# class.
+
+#
+# List of providers and their preference orders (see above):
+#
+security.provider.1=sun.security.provider.Sun
+security.provider.2=sun.security.rsa.SunRsaSign
+security.provider.3=sun.security.ec.SunEC
+security.provider.4=com.sun.net.ssl.internal.ssl.Provider
+security.provider.5=com.sun.crypto.provider.SunJCE
+security.provider.6=sun.security.jgss.SunProvider
+security.provider.7=com.sun.security.sasl.Provider
+security.provider.8=org.jcp.xml.dsig.internal.dom.XMLDSigRI
+security.provider.9=sun.security.smartcardio.SunPCSC
+security.provider.10=apple.security.AppleProvider
+```
+
+## 相关包、类
+### java.security 
+消息摘要
+### javax.crypto
+安全消息摘要、消息认证（鉴别）码
+### java.net.ssl
+安全套接字 HttpsURLConnection、SSLContext
+
+### 第三方扩展
+- Bouncy Castle
+支持两种方案：配置、在代码里编码调用
+- Apache commons codec
 
 
 # 术语
