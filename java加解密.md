@@ -1,4 +1,12 @@
 # BASE64
+[介绍](https://zh.wikipedia.org/wiki/Base64)  
+是一种传输编码，不是加密解算法  
+JDK:sun.misc.BASE64Encoder & sun.misc.BASE64Decoder  
+Apache Commons Codec:Base64  
+Bouncy Castle: org.bouncycastle.util.encoders.Base64  
+
+
+
 # 消息摘要算法
 - MD(Message Digest) 
 
@@ -37,9 +45,9 @@ HmacSHA512|512|JDK
 验证数据完整性
 
 # JAVA安全组成
-JCA(Java Cryptography Architecture):提供基本的java安全的基本加密框架，如消息摘要、数字签名等
+JCA(Java Cryptography Architecture):提供基本的java安全的基本加密框架，如消息摘要、数字签名等  
 JCE(Java Cryptography Extension):对JCA的扩展，提供了很多加密、消息摘要和密钥管理等功能，DES、AES、RSA  
-JSSE(Java Secure Socket Extension):提供基于SSL的加密功能，主要用于网络传输
+JSSE(Java Secure Socket Extension):提供基于SSL的加密功能，主要用于网络传输  
 JAAS(Java Authentication and Authentication Service):  
 
 使用第三方加解密提供者  
