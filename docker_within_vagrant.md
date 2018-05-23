@@ -16,7 +16,8 @@ cd到工作目录，执行vagrant init进行初始化，会生成一个VagrantFi
 
 #Vagrant Parallels provider is compatible only with Pro and Business editions of Parallels Desktop.
 #vagrant plugin install vagrant-parallels
-
+vagrant box list 
+vagrant box add name url/local_path_filename.box 
 mkdir -p my-vagrant-project/ubuntu14.04
 cd my-vagrant-project/ubuntu14.04
 
@@ -28,16 +29,21 @@ vagrant up
 vagrant ssh
 
 
+
+常用命令
+打包
+打包前先vagrant halt停止虚拟机，如果不带--output将默认在当前路径生成package.box的文件，--output可自定义打包后的文件名称
+vagrant package --output ubuntu1404.box 
+
+
+
+
+vagrant suspend 挂起 
+vagrant reload 重启 
+
+
+vagrant init name 
 ```
-常用命令<br />
-vagrant package --output ubuntu1404.box<br />
-vagrant suspend 挂起<br />
-vagrant reload 重启<br />
-
-vagrant box list <br />
-vagrant box add name url<br />
-vagrant init name<br />
-
 ## 配置vagrant
 sudo useradd -d /home/liqh -m -s /bin/zsh
 ```
