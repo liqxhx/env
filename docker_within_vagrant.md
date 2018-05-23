@@ -9,9 +9,14 @@
 ```
 pwd
 /Users/liqh
+一般先vagrant box add xxx xxx.box添加一个box到vagrant系统
+再创建一个工作目录，当做虚拟机的工作环境目前（可以认为该目录就是一个虚拟机）
+cd到工作目录，执行vagrant init进行初始化，会生成一个VagrantFile。
+通过该文件可以进行一个网络、同步文件夹、ssh端口的配置
 
 #Vagrant Parallels provider is compatible only with Pro and Business editions of Parallels Desktop.
 #vagrant plugin install vagrant-parallels
+
 mkdir -p my-vagrant-project/ubuntu14.04
 cd my-vagrant-project/ubuntu14.04
 
