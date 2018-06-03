@@ -9,7 +9,7 @@ public HelloService {
 // 实现
 public HelloServiceImpl extends UnicastRemoteObject implements HelloService{
     public XXXServiceImpl(){
-    super();
+        super();
     }
     
     public String hello(String content){
@@ -22,12 +22,12 @@ public class Server{
     public static void main(String[] args) {
         try {
             // 生成代理HelloServiceImpl_stub
-            //发布了一个远程对象HelloServiceImpl
-           	IHelloService helloService=new HelloServiceImpl();
+            // 发布了一个远程对象HelloServiceImpl
+            IHelloService helloService=new HelloServiceImpl();
 
             // 生成代理RegistryImpl_stub
             // 发布注册服务
-            LocateRegistry.createRegistry(1099);
+            LocateRegistry.createRegistry(1099); // rmiregistry
 
             // 绑定服务
             Naming.rebind("rmi://127.0.0.1/Hello",helloService); //注册中心 key - value
