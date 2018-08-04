@@ -50,9 +50,10 @@ JCE(Java Cryptography Extension):对JCA的扩展，提供了很多加密、消�
 JSSE(Java Secure Socket Extension):提供基于SSL的加密功能，主要用于网络传输  
 JAAS(Java Authentication and Authentication Service):  
 
+使用jdk以外的扩展包需要修改资源文件并增加相关的内容，下面是使用jdk以外的扩展包的方式之一。
 使用第三方加解密提供者  
 jdk中路径：$JAVA_HOME/jre/lib/security/java.security
-```
+```properties
 # Note: Providers can be dynamically registered instead by calls to
 # either the addProvider or insertProviderAt method in the Security
 # class.
@@ -70,15 +71,23 @@ security.provider.7=com.sun.security.sasl.Provider
 security.provider.8=org.jcp.xml.dsig.internal.dom.XMLDSigRI
 security.provider.9=sun.security.smartcardio.SunPCSC
 security.provider.10=apple.security.AppleProvider
+
+#security.provider.11=第三方或自定义的Provider
+```
+硬编码
+```java
+// Note: Providers can be dynamically registered instead by calls to
+// either the addProvider or insertProviderAt method in the Security
+// class.
 ```
 
 ## 相关包、类
-### java.security 
-消息摘要
-### javax.crypto
-安全消息摘要、消息认证（鉴别）码
-### java.net.ssl
-安全套接字 HttpsURLConnection、SSLContext
+### java.security 消息摘要
+
+### javax.crypto 安全消息摘要、消息认证（鉴别）码
+
+### java.net.ssl 安全套接字
+ HttpsURLConnection、SSLContext
 
 ### 第三方扩展
 - Bouncy Castle
@@ -146,7 +155,7 @@ security.provider.10=apple.security.AppleProvider
 数据链路层  
 物理层  
 ### 安全机制
-公正机制、加密机制、数据签名机制、访问控制机制、数据完整性机制、认证机制、业务流填充机制、路由控制机制、公证机制  
+加密机制、数据签名机制、访问控制机制、数据完整性机制、认证机制、业务流填充机制、路由控制机制、公证机制  
 ### 安全服务
 抗否认性服务、 认证/鉴别、访问控制服务、数据保密性服务、数据完整性服务
 
