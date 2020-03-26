@@ -1,4 +1,4 @@
-fehelper FeHelper：JSON格式化 示例1：JSON片段 示例2：在线JSON 
+
 [
 {
 type: "container",
@@ -137,7 +137,7 @@ ports: [
 {
 type: "container",
 title: "v2ray server",
-description:"A Vee Network Solution server docker run -d --restart=always --name=59028.v2ray.server -p 59028:59028 -p 59028:59028/udp lihaixin/v2ray",
+description:"",
 categories: [
 "v2ray"
 ],
@@ -215,7 +215,7 @@ ports: [
 {
 type: "container",
 title: "ylzq",
-description: "earn money docker run name=ylzq2_0 d e uid=38468 lihaixin/ylzq:v2.0",
+description: "",
 categories: [
 "money"
 ],
@@ -575,144 +575,94 @@ ports: [
 restart_policy: "always"
 }
 ]
-Source Online
-251
-],
-252
-privileged: true,
-253
-restart_policy: "always"
-254
-},
-255
-{
-256
-type: "container",
-257
-title: "chromium",
-258
-description: "chromium browser",
-259
-categories: [
-260
-"browser"
-261
-],
-262
-platform: "linux",
-263
-logo: "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/chromium.png",
-264
-image: "lihaixin/chromium:latest",
-265
-volumes: [
-266
-"/root/Downloads"
-267
-],
-268
-ports: [
-269
-"8787/tcp"
-270
+533
 ]
-271
+534
 },
-272
+535
 {
-273
+536
 type: "container",
-274
-title: "shadowsocks Server limit",
-275
-description: "shadowsocks is a crossplatform proxy software",
-276
+537
+title: "frps",
+538
+description: "FRP内网穿透服务器",
+539
 categories: [
-277
-"shadowsocks"
-278
+540
+"tools"
+541
 ],
-279
+542
 platform: "linux",
-280
-logo: "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/Shadowsocks.png",
-281
-image: "lihaixin/shadowsocks:limit",
-282
+543
+logo: "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/frp.png",
+544
+image: "lihaixin/frp:latest",
+545
 ports: [
-283
-"61080/tcp",
-284
-"61080/udp"
-285
+546
+"10000/tcp",
+547
+"10000/udp",
+548
+"10001/tcp",
+549
+"10001/udp",
+550
+"10002/tcp",
+551
+"10002/udp",
+552
+"80/tcp",
+553
+"80/udp",
+554
+"443/tcp",
+555
+"443/udp"
+556
 ],
-286
-env: [
-287
-{
-288
-name: "RATE",
-289
-label: "RATE",
-290
-set: "200mbit"
-291
+557
+restart_policy: "always"
+558
 },
-292
+559
 {
-293
-name: "LIMIT_CONN",
-294
-label: "LIMIT_CONN",
-295
-set: "200"
-296
+560
+type: "container",
+561
+title: "npsdocker",
+562
+description: "NPS内网穿透服务器",
+563
+categories: [
+564
+"tools"
+565
+],
+566
+platform: "linux",
+567
+logo: "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/nps.png",
+568
+image: "lihaixin/npsdocker:latest",
+569
+ports: [
+570
+"80/tcp",
+571
+"443/tcp",
+572
+"8024/tcp"
+573
+],
+574
+restart_policy: "always"
+575
 }
-297
-],
-298
-privileged: true,
-299
-restart_policy: "always"
-300
-},
-301
-{
-302
-type: "container",
-303
-title: "shadowsocks Server ",
-304
-description: "shadowsocks is a crossplatform proxy software",
-305
-categories: [
-306
-"shadowsocks"
-307
-],
-308
-platform: "linux",
-309
-logo: "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/Shadowsocks.png",
-310
-image: "lihaixin/shadowsocks:server",
-311
-ports: [
-312
-"61080/tcp",
-313
-"61080/udp"
-314
-],
-315
-restart_policy: "always"
-316
-},
-317
-{
-318
-type: "container",
-错误位置：139行，15列；缺少字符或字符不正确
+576
+]
 [
 {
 "type": "container",
@@ -851,7 +801,7 @@ type: "container",
 {
 "type": "container",
 "title": "v2ray server",
-"description":"A Vee Network Solution server docker run -d --restart=always --name=59028.v2ray.server -p "<<<<59028":59028 -p "59028":59028/udp lihaixin/v2ray",
+"description": "",
 "categories": [
 "v2ray"
 ],
@@ -929,7 +879,7 @@ type: "container",
 {
 "type": "container",
 "title": "ylzq",
-"description": "earn money docker run name=ylzq2_0 d e uid=38468 "lihaixin/ylzq":v2.0",
+"description": "",
 "categories": [
 "money"
 ],
